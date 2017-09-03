@@ -5,6 +5,9 @@ Price: <%= @article.price %>
 <!-- Come back to add the publisher of article (aka user) -->
 
 <% if session[:id] == @article.user.id %>
+<!-- Q. Should I pass the category too?-->
+<!-- Q. If I'm passing the whole @article object, why do I have to Find it in the edit method of the controller? -->
   <%= link_to 'edit', edit_category_article_path(@article) %>
+<!--   Q. Why this Delete doesn't have a Prefix like Logout? -->
   <%= link_to 'delete', [@article.category, @article], method: :delete, data: { confirm: 'Are you sure you want to delete this article?'} %>
 <% end %>

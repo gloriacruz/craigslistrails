@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    # Q. Is the array [@category, @article] the way I specify the params for the create method?
     @category = Category.find_by(params[:category_id])
     @article = @category.articles.new(article_params)
     @article.user_id = session[:id]

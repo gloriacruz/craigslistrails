@@ -1,5 +1,7 @@
 <h2> Login! </h2>
 
+<!-- Q. How do I know if I need to specify a url? -->
+<!-- Q. How does it know the action is post to /login -->
 <%= form_for(:session, url: login_path) do |f| %>
   <%= f.label :email %>
   <%= f.email_field :email %>

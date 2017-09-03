@@ -1,5 +1,6 @@
 <h2> Edit your article! </h2>
-
+<!-- Q. form_for([array]) when nested resources? -->
+<!-- Q. How does it know is an Update event and not a Create? -->
 <%= form_for([@category, @article]) do |f| %>
   Title: <%= f.text_field :title %>
   Description: <%= f.text_field :description %>

@@ -5,6 +5,7 @@
 
 <ul>
 <% @category.articles.each do |article| %>
+<!-- Q. Is it necessary to pass objects or can we pass only IDs -->
   <li> <%= link_to article.title, category_article_path(@category, article) %> </li>
 <% end %>
 </ul>
