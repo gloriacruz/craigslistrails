@@ -8,6 +8,8 @@
   </ul>
 <% end %>
 
+<!-- Q. Where is @category being assigned?
+Q. When is good to user .buil? -->
 <%= form_for([@category, @article]) do |f| %>
 <!-- We can also have an hidden field with the category_id -->
   Title: <%= f.text_field :title %>

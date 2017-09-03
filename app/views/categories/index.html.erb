@@ -1,8 +1,12 @@
 <h2> Welcome to Craigslist </h2>
 
 <ul>
-  <% @categories.each do |category| %>
-    <li> <%= link_to category.name, category_path(category) %> </li>
-  <% end %>
+  <% if @categories.any? %>
+    <% @categories.each do |category| %>
+      <li> <%= link_to category.name, category_path(category) %> </li>
+    <% end %>
+  <% else %>
+    <li>No categories</li>
+  <% end%>
 </ul>
 
